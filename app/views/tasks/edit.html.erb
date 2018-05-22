@@ -1,0 +1,10 @@
+<h1>Edit one of the tasks <%= @task.title %></h1>
+
+<%= render 'form', button_name: 'Update task' %>
+
+<%= form_for(@task) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.submit %>
+<% end %>
+<%= link_to "Edit", tasks_path %>
